@@ -19,6 +19,7 @@ class Header extends Component {
             <NavItem  eventKey='3' className="navbar-link" href="#contact">Contact</NavItem>
           </Nav>
         </Navbar>
+        <span className="fa fa-list-alt fa-fw"></span>
       </header>
 
   );

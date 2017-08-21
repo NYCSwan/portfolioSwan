@@ -3,6 +3,7 @@ import Header from './Header.react';
 import Footer from './Footer.react';
 import Article from './Article.react';
 import Projects from './Projects.react';
+import Resume from './Resume.react';
 
 import Button from 'react-bootstrap/lib/Button';
 import Grid from 'react-bootstrap/lib/Grid';
@@ -44,7 +45,7 @@ class App extends Component {
         <Row>
           <h3 className="contact-header">connect</h3>
             <Col className="top-pad" md={12}>
-                <h4>Without curiousity and wonder, where would we be?</h4>
+                <h3>Without curiousity and wonder, where would we be?</h3>
             </Col>
             <Button
               bsStyle="success"
@@ -52,36 +53,34 @@ class App extends Component {
               onClick={this.handleEmailContact}>
                 Contact Me
             </Button>
-            <Button
-              href="https://resume.creddle.io/resume/h0ywn3degjs"
-              bsStyle="success"
-              bsSize="large" block>
-                See My Resume
-            </Button>
-            {/*// <button id="contact-button" className="btn btn-lg btn-primary outline">
-            //   <a href="#">Contact Me</a>
-            // </button>*/}
-            <ul id="contact-list" className="hide list-inline list-unstyled">
-                <li>
-                    <a href="http://twitter.com/nycARTseen" className="btn btn-block btn-social btn-twitter">
-                        <span className="fa fa-twitter"></span>
-                        Twitter
-                    </a>
-                </li>
-                <li>
-                    <a href="http://github.com/nycswan" className="btn btn-block btn-social btn-github">
-                        <span className="fa fa-github"> </span>
-                        Github
-                    </a>
-                </li>
-                <li>
-                    <a href="http://linkedin.com/in/megan-swanby" className="btn btn-block btn-social btn-linkedin">
-                        <span className="fa fa-linkedin"></span>Linkedin
-                    </a>
-                </li>
-            </ul>
+
+            {/* <Button
+            //   href="https://www.canva.com/design/DACeyVjfbeo/view?utm_content=DACeyVjfbeo&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
+            //   bsStyle="success"
+            //   bsSize="large" block>
+            //     See My Resume
+            // </Button>
+            //
+            // <Col id="contact-list" className="hide list-inline list-unstyled">
+            //     <Row>
+            //         <a href="http://twitter.com/nycARTseen" className="btn btn-block btn-social btn-twitter">
+            //             <span className="fa fa-twitter"></span>
+            //             Twitter
+            //         </a>
+            //
+            //         <a href="http://github.com/nycswan" className="btn btn-block btn-social btn-github">
+            //             <span className="fa fa-github"> </span>
+            //             Github
+            //         </a>
+            //
+            //         <a href="http://linkedin.com/in/megan-swanby" className="btn btn-block btn-social btn-linkedin">
+            //             <span className="fa fa-linkedin"></span>Linkedin
+            //         </a>
+            //     </Row>
+            // </Col> */}
         </Row>
       </Grid>
+      <Resume />
       <Footer />
    </div>
     );
