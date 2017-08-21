@@ -1,0 +1,35 @@
+.header {
+  background: url('images/header_bridge.jpg') no-repeat;
+  z-index: 1;
+  height: 100vh;
+  font-family: 'BioRhyme', serif;
+  font-size: 20px;
+}
+
+.header-text {
+  font-size: 108px;
+  position: relative;
+  margin-top: 30vh;
+  text-shadow: 2px 2px #eee;
+}
+/* need to do for mobile... looks terrible now */
+
+.navbar {
+  background: transparent;
+  height: 45vh;
+}
+
+.container {
+  height: 45vh;
+
+}
+
+#logo {
+  max-width: 100px;
+  height: auto;
+  float: left;
+}
+
+.navbar-link {
+  float: right !important;
+}

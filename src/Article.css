@@ -1,0 +1,11 @@
+.me h1 {
+  margin-bottom: 3%;
+}
+
+.me img {
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 25%;
+  max-width: 380px;
+  height: auto;
+}
