@@ -1,16 +1,19 @@
 .header {
   background: url('images/header_bridge.jpg') no-repeat;
-  z-index: 1;
+  z-index: 20;
   height: 100vh;
-  font-family: 'BioRhyme', serif;
+  width: 100%;
   font-size: 20px;
 }
 
 .header-text {
   font-size: 108px;
   position: relative;
-  margin-top: 30vh;
+  margin-left: 25%;
+  font-style: italic bold;
+  color: grey;
   text-shadow: 2px 2px #eee;
+  font-family: 'BioRhyme', serif;
 }
 /* need to do for mobile... looks terrible now */
 
@@ -21,7 +24,6 @@
 
 .container {
   height: 45vh;
-
 }
 
 #logo {
@@ -32,4 +34,13 @@
 
 .navbar-link {
   float: right !important;
+}
+
+.chevron {
+  margin: 10%;
+  padding: 4px;
+  border-radius: 50%;
+  width: auto;
+  color: gray;
+  text-shadow: 2px 2px 2px white;
 }

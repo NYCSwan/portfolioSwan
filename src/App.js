@@ -21,9 +21,22 @@ class App extends Component {
     super(props);
 
     this.state = {
-      open: false
+      isOpen: false,
+      className: 'active'
     }
+    this.handleClick = this.handleClick.bind(this);
+    this.handleEmailContact = this.handleEmailContact.bind(this);
+
   }
+
+  handleClick(e) {
+    e.preventDefault();
+    this.setState({
+      isOpen: !this.state.isOpen
+    })
+
+  }
+
   handleEmailContact(e) {
     console.log(e);
   }
@@ -43,44 +56,22 @@ class App extends Component {
 {/* Contact Me */}
       <Grid id="contact" md={12}>
         <Row>
-          <h3 className="contact-header">connect</h3>
+          <h2 className="contact-header">Connect</h2>
             <Col className="top-pad" md={12}>
                 <h3>Without curiousity and wonder, where would we be?</h3>
+                <h2>Get in Touch!</h2>
             </Col>
-            <Button
-              bsStyle="success"
-              bsSize="small"
-              onClick={this.handleEmailContact}>
-                Contact Me
-            </Button>
-
-            {/* <Button
-            //   href="https://www.canva.com/design/DACeyVjfbeo/view?utm_content=DACeyVjfbeo&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
+            {/*// <Button
             //   bsStyle="success"
-            //   bsSize="large" block>
-            //     See My Resume
-            // </Button>
-            //
-            // <Col id="contact-list" className="hide list-inline list-unstyled">
-            //     <Row>
-            //         <a href="http://twitter.com/nycARTseen" className="btn btn-block btn-social btn-twitter">
-            //             <span className="fa fa-twitter"></span>
-            //             Twitter
-            //         </a>
-            //
-            //         <a href="http://github.com/nycswan" className="btn btn-block btn-social btn-github">
-            //             <span className="fa fa-github"> </span>
-            //             Github
-            //         </a>
-            //
-            //         <a href="http://linkedin.com/in/megan-swanby" className="btn btn-block btn-social btn-linkedin">
-            //             <span className="fa fa-linkedin"></span>Linkedin
-            //         </a>
-            //     </Row>
-            // </Col> */}
+            //   bsSize="large"
+            //   onClick={this.handleEmailContact}>
+            //     Get in Touch!
+            // </Button> */}
         </Row>
       </Grid>
-      <Resume />
+      <Resume
+        onClick={this.handleClick}
+      />
       <Footer />
    </div>
     );
