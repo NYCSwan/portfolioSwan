@@ -1,8 +1,20 @@
 #projects {
-  position: relative;
-  margin-bottom: 10%;
+  margin-bottom: 10px;
 }
 
+#projects h1 {
+  font: 68px;
+}
 #projects h2 {
   font: 48px;
+}
+
+.caption1, .caption3, .caption2 {
+  text-align: center;
+  color: black;
+  margin-bottom: 15%;
+  background-color: rgba(187,187,187, 0.8);
+  height: auto;
+  width: auto;
+
 }

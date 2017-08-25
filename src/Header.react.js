@@ -27,7 +27,7 @@ class Header extends Component {
         <h1 className="navbar-brand header-text">Life of a Swan</h1>
         <Col md={12} className="container">
           <Row>
-            <span md={4} className="fa fa-5x fa-angle-double-down chevron" aria-hidden="true"></span>
+            <a href="#projects"><span md={4} className="fa fa-5x fa-angle-double-down chevron" aria-hidden="true"></span></a>
           </Row>
         </Col>
       </div>

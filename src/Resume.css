@@ -1,4 +1,16 @@
 .resume-comtainer {
   height: 1000px;
-  width: 80%;
+  width: 100%;
+  background: #eee;
+}
+
+#resume {
+  margin-top: 3%;
+  background: #eee;
+  width:80%;
+  height:800px;
+}
+
+.external_link {
+  margin: 50px 25px 25px 50px;
 }

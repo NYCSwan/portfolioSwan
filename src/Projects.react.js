@@ -11,6 +11,8 @@ import Carousel from 'react-bootstrap/lib/Carousel';
 import CarouselItem from 'react-bootstrap/lib/CarouselItem';
 import CarouselCaption from 'react-bootstrap/lib/CarouselCaption';
 
+import './projects.css';
+
 class Projects extends Component {
   constructor(...args) {
     super(...args);
@@ -36,11 +38,35 @@ class Projects extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <h2>Projects</h2>
-        <Carousel id="projects" className="col-md-8 col-md-offset-2 col-sm-12" activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
+        <h1>Projects</h1>
+        <Carousel
+          id="projects"
+          className="col-md-8 col-md-offset-2 col-sm-12"
+          activeIndex={this.state.index}
+          direction={this.state.direction}
+          onSelect={this.handleSelect}>
           <CarouselItem className="center-block" >
-            <Image className="img-responsive center-block" width={900} height={1000} src="images/seatgeek.png" alt="SeatGeek project" />
-            <CarouselCaption>
+            <Image
+              className="img-responsive center-block"
+              width={900}
+              height={1000}
+              src="images/office-setup.jpg"
+              alt="good vibes bot" />
+            <CarouselCaption className="caption1">
+              <h2>TECHNOLOGIST</h2>
+              <h3>Good Vibes Bot</h3>
+              <p>Feeling blue? Have a chat with this bot for a nice pick me up.</p>
+            </CarouselCaption>
+          </CarouselItem>
+
+          <CarouselItem className="center-block" >
+          <Image
+              className="img-responsive center-block"
+              width={900}
+              height={1000}
+              src="images/seatgeek.png"
+              alt="SeatGeek project" />
+            <CarouselCaption className="caption2">
               <h2>COMMUNITY ADVOCATE</h2>
               <h3>SeatGeek for All: SeatGeek Hackathon</h3>
               <p>With more than a year of coding experience I take a systematic approach to coding. I love a good challenge and welcome the opportunity to talk more about my work.</p>
@@ -48,24 +74,14 @@ class Projects extends Component {
           </CarouselItem>
 
           <CarouselItem className="center-block" >
-            <Image className="img-responsive center-block" width={900} height={1000} src="images/office-setup.jpg" alt="taste of home project" />
-            <CarouselCaption>
-            <h2>TECHNOLOGIST</h2>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </CarouselCaption>
-          </CarouselItem>
-
-          <CarouselItem className="center-block" >
             <Image className="img-responsive center-block" width={900} height={1000} alt="what's app clone" src="images/computer-fruit.jpg" />
-            <CarouselCaption>
+            <CarouselCaption className="caption3">
               <h3>PROGRAMMER</h3>
               <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
             </CarouselCaption>
           </CarouselItem>
-          <Clearfix></Clearfix>
-
         </Carousel>
+        <Clearfix></Clearfix>
       </div>
     )
   }
