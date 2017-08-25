@@ -7,4 +7,10 @@
 #resume {
   margin-top: 3%;
   background: #eee;
+  width:80%;
+  height:800px;
+}
+
+.external_link {
+  margin: 50px 25px 25px 50px;
 }
