@@ -5,6 +5,13 @@ import Article from './Article.react';
 import Projects from './Projects.react';
 import Resume from './Resume.react';
 
+import Clearfix from 'react-bootstrap/lib/Clearfix';
+import Jumbotron from 'react-bootstrap/lib/Jumbotron';
+import Grid from 'react-bootstrap/lib/Grid';
+import Row from 'react-bootstrap/lib/Row';
+import Button from 'react-bootstrap/lib/Button';
+import Col from 'react-bootstrap/lib/Col';
+
 import './App.css';
 
 class App extends Component {
@@ -17,8 +24,6 @@ class App extends Component {
       className: 'active'
     }
     this.handleClick = this.handleClick.bind(this);
-    this.handleEmailContact = this.handleEmailContact.bind(this);
-
   }
 
   handleClick(e) {
@@ -29,10 +34,6 @@ class App extends Component {
 
   }
 
-  handleEmailContact(e) {
-    console.log(e);
-  }
-
   render() {
     return (
       <div className="App">
@@ -41,17 +42,30 @@ class App extends Component {
           <Article />
         </Jumbotron>
 
-{/* Projects */}
+      {/* Projects */}
         <Projects />
         <Clearfix></Clearfix>
 
-{/* Contact Me */}
-
-      <Resume
-        onClick={this.handleClick}
-      />
-      <Footer />
-   </div>
+      {/* Contact Me */}
+        <Grid id="contact" md={12}>
+          <Row>
+            <h2 className="contact-header">Connect</h2>
+              <Col className="top-pad" md={12}>
+                  <h3>Without curiousity and wonder, where would we be?</h3>
+                  <h2>Get in Touch!</h2>
+              </Col>
+          </Row>
+          <Button
+            href="#resume"
+            bsStyle="success"
+            bsSize="large"
+            onClick={this.handleClick}>
+              See My Resume
+          </Button>
+        </Grid>
+       { this.state.isOpen ? <Resume /> : null }
+        <Footer />
+      </div>
     );
   }
 }
